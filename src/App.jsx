@@ -36,7 +36,7 @@ const MyPageOrderCloseDetail = lazy(
 );
 const AuthCeoPage = lazy(() => import("./pages/AuthCeoPage.tsx"));
 const AuthPage = lazy(() => import("./pages/AuthPage.tsx"));
-const AuthUserPage = lazy(() => import("./pages/AuthUserPage.tsx"));
+const AuthUserPage = lazy(() => import("./pages/AuthUserPage"));
 const CeoPage = lazy(() => import("./pages/CeoPage.jsx"));
 const HomePage = lazy(() => import("./pages/HomePage"));
 const LoginPage = lazy(() => import("./pages/LoginPage"));
