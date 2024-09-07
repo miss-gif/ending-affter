@@ -34,7 +34,7 @@ const RootLayout = lazy(() => import("./components/layout/RootLayout"));
 const MyPageOrderCloseDetail = lazy(
   () => import("./components/user/mypage/MyPageOrderCloseDetail"),
 );
-const AuthCeoPage = lazy(() => import("./pages/AuthCeoPage.tsx"));
+const AuthOwnerPage = lazy(() => import("./pages/AuthOwnerPage"));
 const AuthPage = lazy(() => import("./pages/AuthPage.tsx"));
 const AuthUserPage = lazy(() => import("./pages/AuthUserPage"));
 const CeoPage = lazy(() => import("./pages/CeoPage.jsx"));
@@ -77,7 +77,7 @@ function App() {
             <Route path="/signup">
               <Route index element={<AuthPage />} />
               <Route path="user" element={<AuthUserPage />} />
-              <Route path="owner" element={<AuthCeoPage />} />
+              <Route path="owner" element={<AuthOwnerPage />} />
             </Route>
             <Route path="/oauth/redirect" element={<SnsLoginPage />} />
 
