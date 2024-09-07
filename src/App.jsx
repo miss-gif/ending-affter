@@ -39,7 +39,7 @@ const AuthPage = lazy(() => import("./pages/AuthPage.tsx"));
 const AuthUserPage = lazy(() => import("./pages/AuthUserPage.tsx"));
 const CeoPage = lazy(() => import("./pages/CeoPage.jsx"));
 const HomePage = lazy(() => import("./pages/HomePage"));
-const LoginPage = lazy(() => import("./pages/LoginPage.tsx"));
+const LoginPage = lazy(() => import("./pages/LoginPage"));
 const MyPage = lazy(() => import("./pages/MyPage.tsx"));
 const MyPageAddress = lazy(() => import("./pages/MyPageAddress"));
 const MyPageCouponPage = lazy(() => import("./pages/MyPageCouponPage"));
