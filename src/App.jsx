@@ -74,10 +74,10 @@ function App() {
           <Routes>
             {/* 로그인 및 회원가입 */}
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/auth">
+            <Route path="/signup">
               <Route index element={<AuthPage />} />
               <Route path="user" element={<AuthUserPage />} />
-              <Route path="ceo" element={<AuthCeoPage />} />
+              <Route path="owner" element={<AuthCeoPage />} />
             </Route>
             <Route path="/oauth/redirect" element={<SnsLoginPage />} />
 

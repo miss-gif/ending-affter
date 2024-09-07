@@ -73,7 +73,7 @@ const LoginPage = () => {
           로그인
         </button>
         <div className="mt-4 flex justify-between">
-          <a href="/auth" className="text-indigo-600 hover:text-indigo-700">
+          <a href="/signup" className="text-indigo-600 hover:text-indigo-700">
             회원가입
           </a>
           <button
