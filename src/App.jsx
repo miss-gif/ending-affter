@@ -65,12 +65,13 @@ const RestaurantDetailPage2 = lazy(
   () => import("./pages/user/RestaurantDetailPage2"),
 );
 const RestaurantsPage = lazy(() => import("./pages/user/main/RestaurantsPage"));
+import LoadingSpinner from "./components/common/LoadingSpinner";
 
 function App() {
   return (
     <OrderProvider>
       <div className="root-wrap">
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingSpinner />}>
           <Routes>
             {/* 로그인 및 회원가입 */}
             <Route path="/login" element={<LoginPage />} />
