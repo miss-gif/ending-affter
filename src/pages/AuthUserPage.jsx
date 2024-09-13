@@ -158,9 +158,9 @@ const UserSignupPage = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-6">
       <div className="w-full max-w-lg bg-white rounded-lg shadow-md p-8">
-        <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
+        <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
           사용자 회원가입
-        </h1>
+        </h2>
         <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col space-y-2">
             <label
