@@ -23,7 +23,7 @@ const IntroPage = () => {
             <a href="/login" className="intro-page__header-login intro-btn">
               로그인
             </a>
-            <a href="/auth" className="intro-page__header-signup intro-btn">
+            <a href="/signup" className="intro-page__header-signup intro-btn">
               회원가입
             </a>
           </div>

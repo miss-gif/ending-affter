@@ -3,7 +3,13 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { setUser } from "../store/userSlice";
+import {
+  setUserData,
+  setAccessToken,
+  setUserRole,
+  setUserAddress,
+  setUserPhone,
+} from "../store/userSlice";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
@@ -18,12 +24,30 @@ const LoginPage = () => {
         user_id: username,
         user_pw: password,
       });
-      if (response.data.statusCode === 1) {
-        dispatch(setUser(response.data.resultData));
+
+      const { statusCode, resultData, resultMsg } = response.data;
+
+      // 공통 데이터 처리 함수
+      const handleSuccess = (data, redirectPath) => {
+        const { userData, accessToken, userRole, userAddress, userPhone } =
+          data;
+
+        dispatch(setUserData(userData));
+        dispatch(setAccessToken(accessToken));
+        dispatch(setUserRole(userRole));
+        dispatch(setUserAddress(userAddress));
+        dispatch(setUserPhone(userPhone));
+
         toast.success("로그인 성공");
-        navigate("/");
+        navigate(redirectPath);
+      };
+
+      if (statusCode === 1) {
+        handleSuccess(resultData, "/");
+      } else if (statusCode === 2) {
+        handleSuccess(resultData, "/admin");
       } else {
-        toast.error("로그인 실패: " + response.data.resultMsg);
+        toast.error("로그인 실패: " + resultMsg);
       }
     } catch (error) {
       toast.error("로그인 실패: 네트워크 오류");
